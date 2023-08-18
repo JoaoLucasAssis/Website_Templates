@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Navigation Tab Icon Link -->
+    <link rel="icon" href="assets/images/logo.ico" type="image/x-icon">
+
+    <!-- main.css Link -->
+    <link rel="stylesheet" href="styles/main.css">
+
+    <!-- header.css Link -->
+    <link rel="stylesheet" href="styles/header.css">
+
+    <!-- hero.css Link -->
+    <link rel="stylesheet" href="styles/hero.css">
+
+    <!-- carousel.css Link -->
+    <link rel="stylesheet" href="styles/carousel.css">
+
+    <!-- Title -->
+    <title>Website</title>
+</head>
+
+<body>
+    <!-- 
+
+        Header
+
+     -->
+    <header id="header">
+
+        <!-- Navigation -->
+        <nav class="header__nav">
+
+            <!-- Logo -->
+            <p class="header__nav--logo">Logo</p>
+
+            <!-- Navigation List -->
+            <ul class="header__nav--list">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">Packages</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <!-- Hamburger -->
+            <div class="header__nav--hamburger">
+                <div></div>
+            </div>
+        </nav>
+
+        <div class="header__hamburger-menu">
+            <ul class="header__hamburger-menu--list">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">Packages</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- 
+
+        Carousel
+
+     -->
+    <main id="carousel-container">
+
+        <!-- Carousel Left Arrow -->
+        <div class="carousel-container__arrow-container arrow-left">
+            <img src="assets/images/arrow.png" alt="arrow">
+        </div>
+
+        <!-- Carousel Text-Content -->
+        <div class="carousel-container__content">
+            <h1>Starts Here</h1>
+            <button>Click Now</button>
+        </div>
+
+        <!-- Carousel -->
+        <ul class="carousel-container__carousel">
+            <li class="carousel-container__carousel--page current-page">
+                <!-- 
+    
+                    Hero Section
+    
+                 -->
+                <section id="hero">
+
+                    <div class="hero__img-container">
+                        <img src="assets/images/lake.jpg" alt="Lake Image">
+                        <img src="assets/images/forest.jpg" alt="Forest Image">
+                        <img src="assets/images/waterfall.jpg" alt="Waterfall Image">
+                    </div>
+                </section>
+            </li>
+            <li class="carousel-container__carousel--page">
+                <!-- 
+
+                    Packages Sections
+
+                 -->
+                <section id="packages">
+                </section>
+            </li>
+        </ul>
+
+        <div class="carousel-container__nav">
+            <button class="carousel-container__nav--btn current-page"></button>
+            <button class="carousel-container__nav--btn"></button>
+        </div>
+
+        <!-- Carousel Right Arrow -->
+        <div class="carousel-container__arrow-container arrow-right">
+            <img src="assets/images/arrow.png" alt="arrow">
+        </div>
+    </main>
+
+    <!-- script.js Link -->
+    <script src="scripts/script.js"></script>
+
+    <!-- header.js Link -->
+    <script src="scripts/header.js"></script>
+</body>
+
+</html>

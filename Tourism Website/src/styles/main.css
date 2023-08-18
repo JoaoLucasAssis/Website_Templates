@@ -1,0 +1,57 @@
+/*-*-*-*-*-*-*-*-*-* Reset *-*-*-*-*-*-*-*-*-*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection {
+    background-color: var(--color-text);
+    color: var(--color-primary);
+}
+
+/*-*-*-*-*-*-*-*-*-* Imported Contents  *-*-*-*-*-*-*-*-*-*/
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
+/*-*-*-*-*-*-*-*-*-* Reusable Components  *-*-*-*-*-*-*-*-*-*/
+:root {
+    font-size: 62.5%;
+    /* 1rem = 10px */
+
+    --color-primary: #796141;
+    --color-text: #fff;
+
+    --transition-duration: 1s;
+}
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+
+    text-decoration-color: red;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    position: relative;
+
+    font-size: calc(1rem + 0.5vw);
+    text-transform: uppercase;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    object-fit: cover;
+}
+
+section#packages {
+    width: 100%;
+    height: 100%;
+
+    background: url("../assets/images/mountain.jpg") center/cover no-repeat;
+}

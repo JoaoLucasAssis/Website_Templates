@@ -1,0 +1,150 @@
+/*-*-*-*-*-*-*-*-*-* Carousel-Container *-*-*-*-*-*-*-*-*-*/
+main#carousel-container {
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+}
+
+.carousel-container__carousel {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    transition: all var(--transition-duration) ease-in-out;
+}
+
+.carousel-container__carousel--page {
+    flex: 0 0 100%;
+    height: 100%;
+}
+
+/*-*-*-*-*-*-*-*-*-* Carousel Content *-*-*-*-*-*-*-*-*-*/
+.carousel-container__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+    z-index: 1;
+}
+
+.carousel-container__content>h1 {
+    font-size: calc(4rem + 4vw);
+    margin-bottom: calc(1rem + 1vw);
+    text-transform: capitalize;
+
+    color: var(--color-text);
+}
+
+@keyframes carousel-container__content--h1 {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.carousel-container__content>button {
+    padding: 1.5rem 4rem;
+    font-size: calc(0.5rem + 1vw);
+    font-weight: 700;
+    text-transform: capitalize;
+
+    border: 0.2rem solid var(--color-text);
+    border-radius: 5rem;
+    background-color: var(--color-text);
+    color: var(--color-primary);
+
+    visibility: visible;
+    transition: all var(--transition-duration);
+    cursor: pointer;
+}
+
+.carousel-container__content>button:hover {
+    background-color: transparent;
+    color: var(--color-text);
+}
+
+/*-*-*-*-*-*-*-*-*-* Carousel Arrow-Container *-*-*-*-*-*-*-*-*-*/
+.carousel-container__arrow-container {
+    width: calc(5rem + 5vw);
+
+    position: absolute;
+    top: 50%;
+
+    transition: all .25s .5s;
+    visibility: hidden;
+    z-index: 10;
+    user-select: none;
+}
+
+.carousel-container__arrow-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.arrow-left {
+    transform: translateY(-50%) rotate(180deg);
+    left: 5rem;
+}
+
+.arrow-right {
+    transform: translateY(-50%);
+    right: 5rem;
+}
+
+.carousel-container__arrow-container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 5rem;
+    transform: translateY(-50%);
+
+    width: 80%;
+    height: 80%;
+
+    border: 0.5rem solid var(--color-text);
+    border-radius: 50%;
+    transition: all var(--transition-duration);
+    cursor: pointer;
+}
+
+.carousel-container__arrow-container:hover::after {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+
+/*-*-*-*-*-*-*-*-*-* Carousel Navigation *-*-*-*-*-*-*-*-*-*/
+.carousel-container__nav {
+    position: absolute;
+    bottom: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 3rem;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: all var(--transition-duration);
+}
+
+.carousel-container__nav--btn {
+    width: 2rem;
+    height: 2rem;
+
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+}
+
+.carousel-container__nav--btn.current-page {
+    background-color: var(--color-text);
+}
